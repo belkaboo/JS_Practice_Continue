@@ -62,8 +62,8 @@ let itemEl = document.querySelector('.item');
 
 
 while (subtitleEl.parentElement) {
-    subtitleEl = subtitleEl.parentElement;
-    console.log(subtitleEl);
+  subtitleEl = subtitleEl.parentElement;
+  console.log(subtitleEl);
 }
 
 
@@ -86,10 +86,10 @@ const h2El = document.createElement('h2');
 h2El.textContent = 'вы не заполнили поле ввода';
 
 buttonEl.onclick = function () {
-    if (!inputEl.value) {
-        formEl.appendChild(h2El);
-        inputEl.style.border = '3px solid red';
-    }
+  if (!inputEl.value) {
+    formEl.appendChild(h2El);
+    inputEl.style.border = '3px solid red';
+  }
 }
 
 
@@ -107,10 +107,5 @@ newBtnEl.textContent = 'Отправить';
 
 
 newBtnEl.addEventListener('click', () => {
-    newBtnEl.textContent = 'Отправлено';
+  newBtnEl.textContent = 'Отправлено';
 });
-
-
-
-
-
