@@ -44,7 +44,7 @@
 
         const allEl = document.querySelectorAll('*');
         allEl.forEach(element => {
-            element.classList.contains('menu') ? element.classList.toggle('dropdown-menu') : 0;
+            element.classList.contains('menu') ? element.classList.remove('dropdown-menu') : 0;
         });
 
         // 4. Используя метод insertAdjacentHTML добавьте после div'a с классом "dropdown" следующую разметку:`<a href="#">link</a>`
