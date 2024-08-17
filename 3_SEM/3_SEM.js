@@ -103,7 +103,6 @@ buttonMouseoverEl.addEventListener('mouseout', function (e) {
 Создать кнопку, при клике на которую ей добавляется класс “click”
 */
 
-//todo
 
 
 const listEls = document.querySelector('ul');
