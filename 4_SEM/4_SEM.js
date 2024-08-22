@@ -1,5 +1,4 @@
 'use strict';
-
 /*
 В html создать элемент checkbox и текст рядом с ним “Согласен с условиями”
 Добавить кнопку отправить
@@ -7,6 +6,17 @@
 Если элемент не выбран, добавить текст под чекбоксом “Необходимо согласиться с условиями”
 */
 
+
+const checkboxDivEl = document.querySelector('.content');
+const checkboxEl = checkboxDivEl.querySelector('.check');
+const btnSendEl = document.querySelector('.btn-send');
+const errorMsgEl = document.createElement('p');
+errorMsgEl.textContent = ('Необходимо согласиться с условиями');
+
+
+btnSendEl.addEventListener('click', () => {
+    (!checkboxEl.checked) ? checkboxDivEl.appendChild(errorMsgEl) : checkboxDivEl.removeChild(errorMsgEl);
+});
 
 
 
@@ -19,8 +29,14 @@
 Если выбран кофе, необходимо вывести соообщение “кофе закончился”
 */
 
+const radioButtonsEls = document.querySelectorAll('.radio');
+const radioButtonSendEl = document.querySelector('.btn-radio-submit');
 
-
+radioButtonSendEl.addEventListener('click', (e) => {
+    radioButtonsEls.forEach(element => {
+        if (element.checked) console.log(`${element.nextElementSibling.textContent} закончился`);
+    });
+});
 
 
 /*
@@ -30,6 +46,50 @@
 Если пароль неверный, у поля ввода появляется красная обводка и текст “пароль неверный”
 */
 
+const inputPwdEl = document.querySelector('.pwd-input');
+const btnSendPwdEl = document.querySelector('.btn-pwd-submit');
+let pwd = '';
+
+
+// тупо, но работает
+inputPwdEl.addEventListener('focus', function (e) {
+    inputPwdEl.value = "";
+});
+inputPwdEl.addEventListener('change', function (e) {
+    pwd = e.target.value;
+});
+
+
+btnSendPwdEl.addEventListener('click', (e) => {
+    if (pwd === 'пароль') {
+        inputPwdEl.classList.add('valid__pwd');
+        inputPwdEl.classList.remove('invalid__pwd');
+
+    }
+    else {
+        inputPwdEl.classList.add('invalid__pwd');
+        inputPwdEl.value = 'пароль неверный'
+    }
+});
 
 
 
+/*
+Создать поле ввода и под ним заголовок h1 с текстом “Заголовок”
+При вводе текста в поле ввода необходимо чтобы текст внутри заголовка менятся на введенный в поле ввода
+*/
+
+
+const inputChangeEl = document.querySelector('.text-input');
+const h1El = document.querySelector('.h1');
+
+inputChangeEl.addEventListener('focus', function (e) {
+    inputChangeEl.value = '';
+});
+inputChangeEl.addEventListener('blur', function (e) {
+    inputChangeEl.value = 'Введите текст';
+});
+
+inputChangeEl.addEventListener('input', function (e) {
+    h1El.innerHTML = inputChangeEl.value;
+});
