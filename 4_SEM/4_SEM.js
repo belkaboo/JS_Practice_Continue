@@ -91,5 +91,6 @@ inputChangeEl.addEventListener('blur', function (e) {
 });
 
 inputChangeEl.addEventListener('input', function (e) {
+
     h1El.innerHTML = inputChangeEl.value;
 });
