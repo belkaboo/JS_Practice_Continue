@@ -60,4 +60,14 @@ for (const key in productData) {
 
 
 //categories
-// реализовать сортировку по категориям
+
+function renderCategories(category) {
+    if (productData[key].category = category) {
+        // вывод товаров с данной категрией
+        //
+    }
+}
+
+function renderAllcategories() {
+    //вывод всех товаров ()
+}

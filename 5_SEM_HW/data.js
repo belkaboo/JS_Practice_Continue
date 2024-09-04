@@ -1,3 +1,4 @@
+// from https://fakestoreapi.com/products
 
 const jsonData = `
 [
