@@ -1,6 +1,15 @@
 const productData = JSON.parse(jsonData);
+const categoriesData = JSON.parse(categories);
 const productBox = document.querySelector('.product-box');
+const UlEls = document.querySelector('.categories__links');
 
+
+for (const key in categoriesData) {
+    const liEl = document.createElement('li');
+    liEl.textContent = categoriesData[key];
+    UlEls.appendChild(liEl);
+
+}
 
 for (const key in productData) {
 
@@ -71,3 +80,5 @@ function renderCategories(category) {
 function renderAllcategories() {
     //вывод всех товаров ()
 }
+
+
