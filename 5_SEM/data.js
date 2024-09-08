@@ -16,7 +16,7 @@ getDataFromApi(urlApi);
 
 
 
-
+//добавить await в вызов функции
 
 
 
