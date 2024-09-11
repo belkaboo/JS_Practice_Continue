@@ -1149,9 +1149,3 @@ body {
     }
 
 }
-
-@media (max-width: 1280px) {
-    .content {
-        white-space: wrap;
-    }
-}
