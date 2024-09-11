@@ -553,6 +553,101 @@ body {
     fill: #F16D7F;
 }
 
+
+.cart {
+
+    margin: 96px auto;
+}
+
+/* Cart */
+.cart-box {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+
+}
+
+.cart__item {
+    margin-top: 0px;
+    width: 652px;
+    height: 306px;
+    border: 1px solid #EAEAEA;
+    box-shadow: 17px 19px 24px 0px #00000021;
+    display: flex;
+
+
+}
+
+.cart-item__content {
+    margin: 22px 0px 62px 31px;
+}
+
+.cart-item__heading {
+    margin-bottom: 12px;
+    width: 262px;
+    height: 58px;
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28.8px;
+    text-align: left;
+    color: #222222;
+
+}
+
+.cart-item__price,
+.cart-item__color,
+.cart-item__size,
+.cart-item__quantity {
+    margin-bottom: 6px;
+    font-style: normal;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26.4px;
+    text-align: left;
+    color: #575757;
+}
+
+.cart-item__input {
+    width: 44px;
+    height: 24.95px;
+    border: 1px solid #EAEAEA;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    font-family: Lato;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #656565;
+    margin-left: 24px;
+
+}
+
+.cart-icon__close {
+    margin-top: 28px;
+    margin-left: 57px;
+
+}
+
+.cart-icon {
+    cursor: pointer;
+}
+
+.cart-color__price,
+.color__total {
+    color: #EF5B70;
+}
+
+
+
+
+
+
+
+
 @media (max-width: 768px) {
     .center {
         padding-left: 16px;
@@ -987,7 +1082,7 @@ body {
         background-position: center;
     }
 
-    .categories_kids {
+    image-leftcategories_kids {
         background: url(img/forkids.svg), rgba(33, 22, 22, 0.70);
         background-blend-mode: hue;
         background-size: cover;
@@ -1053,4 +1148,10 @@ body {
         margin-bottom: 71px;
     }
 
+}
+
+@media (max-width: 1280px) {
+    .content {
+        white-space: wrap;
+    }
 }
